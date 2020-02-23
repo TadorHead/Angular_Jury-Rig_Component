@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { ConfirmDialogueComponent } from './confirm-dialogue/confirm-dialogue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    ConfirmDialogueComponent
   ],
+  entryComponents: [ConfirmDialogueComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
