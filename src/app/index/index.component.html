@@ -1,15 +1,19 @@
 <div class="container mat-typography">
     <h1>Dialogue Box Demo</h1>
+
+    <!-- Delete Dialogue -->
     <div class="delete-box">
         <p>Click Button to delete something.</p>
         <p>Delete: {{ confirm_Delete }}</p>
         <button mat-raised-button (click)="onDelete()">Delete</button>
+        <!-- TODO: Fix boolean logic for the statements below. -->
         <p *ngIf='confirm_Delete' id="success">Item has been deleted!</p>
         <p *ngIf='!confirm_Delete' id="error">Nothing has been deleted.</p>
     </div>
 
+    <!-- Picture Popout Dialogue -->
     <div class="picture-box">
         <p>Click the picture to open pop-up.</p>
-        <img id="avatar" src="../../assets/images/14_57_01_2_file.jpg">
+        <img id="avatar" (click)="onPopOut()" src="../../assets/images/14_57_01_2_file.jpg">
     </div>
 </div>
