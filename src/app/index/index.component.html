@@ -2,7 +2,10 @@
     <h1>Dialogue Box Demo</h1>
     <div class="delete-box">
         <p>Click Button to delete something.</p>
+        <p>Delete: {{ confirm_Delete }}</p>
         <button mat-raised-button (click)="onDelete()">Delete</button>
+        <p *ngIf='confirm_Delete' id="success">Item has been deleted!</p>
+        <p *ngIf='!confirm_Delete' id="error">Nothing has been deleted.</p>
     </div>
 
     <div class="picture-box">

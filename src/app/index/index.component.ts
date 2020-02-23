@@ -10,11 +10,14 @@ import { ConfirmDialogueComponent } from '../confirm-dialogue/confirm-dialogue.c
   styleUrls: ['./index.component.sass']
 })
 export class IndexComponent implements OnInit {
-  confirm_Delete: boolean;
+  confirm_Delete: boolean = false;
 
-  constructor(private dialogue: MatDialog) { }
+  constructor(private dialogue: MatDialog) { 
+    console.log(`Value after: ${this.confirm_Delete}`);
+  }
 
   ngOnInit() {
+    // console.log(`Value after: ${this.confirm_Delete}`);
   }
 
   onDelete() {
