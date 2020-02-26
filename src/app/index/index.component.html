@@ -7,8 +7,8 @@
         <p>Delete: {{ confirm_Delete }}</p>
         <button mat-raised-button (click)="onDelete()">Delete</button>
         <!-- TODO: Fix boolean logic for the statements below. -->
-        <p *ngIf='confirm_Delete' id="success">Item has been deleted!</p>
-        <p *ngIf='!confirm_Delete' id="error">Nothing has been deleted.</p>
+        <p class="dialog-feedback" *ngIf='confirm_Delete && confirm_Delete!==null' id="success">Item has been deleted!</p>
+        <p class="dialog-feedback" *ngIf='!confirm_Delete && confirm_Delete!==null' id="error">Nothing has been deleted.</p>
     </div>
 
     <!-- Picture Popout Dialogue -->

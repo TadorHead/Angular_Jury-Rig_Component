@@ -13,7 +13,7 @@ import { PictureDialogueComponent } from '../picture-dialogue/picture-dialogue.c
 export class IndexComponent implements OnInit {
 
   // Dialogue Variables
-  confirm_Delete: boolean = false;
+  confirm_Delete: boolean = null;
   image_path: string = "../../assets/images/14_57_01_2_file.jpg"
 
   constructor(private dialogue: MatDialog) {}
@@ -29,7 +29,7 @@ export class IndexComponent implements OnInit {
     });
 
     dialogue_Box.afterClosed().subscribe(data => {
-      this.confirm_Delete = data;
+      this.confirm_Delete = JSON.parse(data);
     });
   }
 
